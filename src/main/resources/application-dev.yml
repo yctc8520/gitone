@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: mall
+    password: root
+    url: jdbc:mysql://121.4.168.45:3306/mall?characterEncoding=utf-8&useSSL=false
+  redis:
+    host: 121.4.168.45
+    port: 8271
+    password: 123456
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+    #控制台日志配置
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath:mappers/*.xml
+logging:
+  pattern:
+    console: "[%thread] %-5level %logger{36} - %msg%n"
+server:
+  servlet:
+    session:
+      timeout: 120
+  port: 8057
